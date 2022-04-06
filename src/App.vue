@@ -1,15 +1,10 @@
 <template>
-  <FormPage />
+  <router-view />
 </template>
 
 <script>
-import FormPage from './components/FormPage.vue'
-
 export default {
   name: 'App',
-  components: {
-    FormPage
-  }
 }
 </script>
 
