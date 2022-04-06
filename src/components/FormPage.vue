@@ -78,8 +78,10 @@ export default {
     }
   },
   
-  watch: {
-
+    watch: {
+    'formBody.city.isOnline': function() {
+        this.formBody.city.name = 'Выберите город'
+    }
   },
 
   computed: {
@@ -133,8 +135,10 @@ export default {
 * {
   text-align: left;
 }
-.input{
-  text-align: left;
+.form__group.is-required .form__label:before {
+  content: '*';
+  color: red;
+  margin-right: 4px;
 }
 h3 {
   margin: 40px 0 0;
