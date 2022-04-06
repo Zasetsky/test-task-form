@@ -165,13 +165,8 @@ form {
 }
 
 select {
-  color: gray;
   width: 200px;
   height: 30px;
-}
-
-option:not(:first-of-type) {
-  color: black;
 }
 
 .container {
