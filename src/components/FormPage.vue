@@ -17,8 +17,8 @@
           </option>
         </select>
       </div>
-      <input class="qwe" type="checkbox" name="terms" v-model="formBody.city.isOnline" value="true" />
-            Онлайн
+      <input class="qwe" type="checkbox" id="check" v-model="formBody.city.isOnline" value="true" />
+           <label for="check"> Онлайн</label>
 
   <!-- 2 -->
 
@@ -36,7 +36,7 @@
         <input class="qwe" type="radio" id="two" value="Не работает личный кабинет" v-model="radioButton">
         <label for="two">Не работает личный кабинет</label>
         <br>
-        <input class="text_input" type="text" v-model="customInput" placeholder="другое">
+        <input class="text_input" type="text" v-model="customInput" placeholder="Другое">
       </div>   
 
   <!-- 3 -->
@@ -167,6 +167,10 @@ form {
 select {
   width: 200px;
   height: 30px;
+  cursor: pointer;
+}
+select:disabled {
+  cursor: default;
 }
 
 .container {
@@ -180,7 +184,7 @@ select {
   cursor:pointer;
   }
 
-.input label {
+label {
   margin-left: 10px;
 }
 
@@ -200,6 +204,9 @@ textarea {
   width: 800px;
   height: 100px;
   resize: none;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button {
@@ -211,9 +218,17 @@ button {
   color: rgb(255, 255, 255);
   background: rgb(236, 141, 64);
   border: none;
+  cursor: pointer;
 }
+
+[type=file] {
+  cursor: pointer;
+}
+
 button:disabled {
   background: rgb(227, 227, 227);
   border: none;
+  cursor: default;
 }
+
 </style>
